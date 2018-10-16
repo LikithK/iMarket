@@ -1,0 +1,51 @@
+<!--Primary Navigation -->
+<div class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="mainNav">
+  <div class="container-fluid">
+    <a class="navbar-brand h1 mb-0" routerLink="/home">
+    <img src="assets/Images/Brandlogo.jpg" height="50" width="50" class="d-inline-block" style="border-radius:40px;" alt="iMarketLogo"/>
+      {{appTitle}} 
+    </a>
+    <input type="text" placeholder="Search for products.." class="form-control col-4 mr-auto">
+      <button class="btn btn-outline-info mr-auto" type="button"><i class="fa fa-search"></i></button>
+    <div class="collapse navbar-collapse" id="primaryNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <button class="btn btn-outline-secondary" type="button" data-target="/homeregisterModal" data-toggle="modal">Register<i class="fa fa-user"></i></button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-outline-secondary" type="button">Login<i class="fa fa-sign-in"></i></button>
+        </li>
+      </ul>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="/homeprimaryNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</div>	<!--Primary Navigation End-->
+
+<!--Secondary Navigation -->
+<div class="navbar  navbar-expand-lg navbar-dark bg-dark" id="secondaryNav">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="/homesecondaryNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="secondaryNavbar">
+      <ul class="navbar-nav mr-auto">
+        <li *ngFor="let item of menuItems" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"><i class={{item.icon}}></i> {{item.heading}}</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" routerLink="/mobiles">Mobiles</a>
+							<a class="dropdown-item" routerLink="/mobiles">Mobile Accessories</a>
+							<a class="dropdown-item" routerLink="/laptops">Laptops</a>
+							<a class="dropdown-item" routerLink="/laptops">Laptop Accessories</a>
+          </div>
+        </li>
+      </ul>
+      <ul class=" navbar-nav ml-auto">
+        <li class="nav-item">
+          <a routerLink="/home"><i class="fa fa-shopping-cart fa-2x" style="color:white"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div><!--Secondary Navigation End-->

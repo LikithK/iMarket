@@ -1,0 +1,10 @@
+<ul class="list-unstyled mt-5 ml-5">
+	<li *ngFor="let mobile of mobiles"  class="media mb-2">
+		<img src={{mobile.img}} class="img-size-mobiles"/>
+		<div class="media-body ml-5 mt-3">
+			<a routerLink="home"><h3>{{mobile.heading}}</h3></a>
+			<p class="h4">{{mobile.price}}</p>
+			<p class="text-secondary">{{mobile.subheading}}</p>
+		</div>
+	</li>
+</ul>
